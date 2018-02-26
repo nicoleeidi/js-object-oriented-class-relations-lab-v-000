@@ -23,7 +23,7 @@ class Passenger {
   }
   trips(){
     return store.trips.filter(function(trip){return trip.passengerId===this.id})
-  }
+    }
   drivers(){
     trips= store.trips.filter(function(trip){return trip.passengerId===this.id})
     return trips.map(function(trip){return trip.driverId})
