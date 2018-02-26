@@ -24,7 +24,10 @@ class Passenger {
   trips(){
     return store.items.filter(trip){return trip.passengerId===this.id}
   }
-  drivers(){}
+  drivers(){
+    trips= store.items.filter(trip){return trip.passengerId===this.id}
+    return trips.map(trip){return trip.driverId}
+  }
 }
 let tripId=0
 class Trip {
