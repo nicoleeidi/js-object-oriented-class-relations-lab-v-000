@@ -34,8 +34,15 @@ class Trip {
   constructor(driver,passenger){
     this.id= ++tripId
     if (passenger){this.passengerId=passenger.id}
+    
     if(driver){this.driverId=driver.id}
     store.trips.push(this)
+  }
+  setDriver(driver){
+    this.driverId = driver.id
+  }
+  setPassenger(passenger){
+    this.passengerId = passenger.id
   }
   driver(){
     return store.drivers.find(function(driver){return driver.id===this.driverId})
