@@ -12,7 +12,7 @@ class Driver {
   passengers(){
     let newtrips= store.trips.filter(trip => {return trip.driverId===this.id})
     let passengersids= newtrips.map(function(trip){return trip.passengerId})
-    passengerids.map(function(passenger){return store.passengers.})
+    passengerids.map(function(id){return store.passengers.id===id})
     //return passengers.filter(passenger => {return passenger.id===newtrips.passengerId})
   }
 }
