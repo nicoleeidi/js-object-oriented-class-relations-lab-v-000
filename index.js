@@ -22,7 +22,7 @@ class Passenger {
     store.passengers.push(this)
   }
   trips(){
-    return store.items.filter(function(trip){return trip.passengerId===this.id})
+    return store.trips.filter(function(trip){return trip.passengerId===this.id})
   }
   drivers(){
     trips= store.items.filter(function(trip){return trip.passengerId===this.id})
