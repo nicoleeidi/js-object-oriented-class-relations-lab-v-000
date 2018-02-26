@@ -30,8 +30,11 @@ class Passenger {
     return store.trips.filter(trip => {return trip.passengerId===this.id})
     }
   drivers(){
-    let newtrips= store.trips.filter(trip => {return trip.passengerId===this.id})
+    let newtrips= store.trips.filter(trip => {return trip.driverId===this.id})
     let driverids.map(function(trip){return trip.driverId})
+    return store.passengers.filter(function(passenger){
+     if (passengerids.includes(passenger.id)){return passenger}
+    })
   }
 }
 let tripId=0
