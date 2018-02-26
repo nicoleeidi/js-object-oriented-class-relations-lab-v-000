@@ -7,11 +7,11 @@ class Driver {
     store.drivers.push(this)
   }
   trips(){
-    return store.items.filter(trip){return trip.driverId===this.id}
+    return store.items.filter(function(trip){return trip.driverId===this.id})
   }
   passengers(){
-    trips= store.trips.filter(trip){return trip.driverId===this.id}
-    return trips.map(trip){return trip.passengerId}
+    trips= store.trips.filter(function(trip){return trip.driverId===this.id})
+    return trips.map(function(trip){return trip.passengerId})
   }
 }
 let passenger1Id=0
@@ -22,11 +22,11 @@ class Passenger {
     store.passengers.push(this)
   }
   trips(){
-    return store.items.filter(trip){return trip.passengerId===this.id}
+    return store.items.filter(function(trip){return trip.passengerId===this.id})
   }
   drivers(){
-    trips= store.items.filter(trip){return trip.passengerId===this.id}
-    return trips.map(trip){return trip.driverId}
+    trips= store.items.filter(function(trip){return trip.passengerId===this.id})
+    return trips.map(function(trip){return trip.driverId})
   }
 }
 let tripId=0
