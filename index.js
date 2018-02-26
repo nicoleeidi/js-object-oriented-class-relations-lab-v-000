@@ -7,7 +7,7 @@ class Driver {
     store.drivers.push(this)
   }
   trips(){
-    return store.items.filter(function(trip){return trip.driverId===this.id})
+    return store.trips.filter(function(trip){return trip.driverId===this.id})
   }
   passengers(){
     trips= store.trips.filter(function(trip){return trip.driverId===this.id})
