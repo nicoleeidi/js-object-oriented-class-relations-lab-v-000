@@ -15,7 +15,7 @@ class Driver {
     //return passengerids.map(function(id){return store.passengers.id===id}) //cannot reference store within map?
     //return store.passengers.filter(passenger => {return passenger.id===passengerids})
     return store.passengers.filter(function(passenger){
-      if (newpassengerids.includes(passenger.id)){return passenger}
+      if (passengerids.includes(passenger.id)){return passenger}
     })
   }
 }
